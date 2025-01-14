@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Підпрограма 1";
+}
+
+<h2>Підпрограма 1</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Input">Введіть дані</label>
+        <input type="text" name="input" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Виконати</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <div class="alert alert-info">
+        <strong>Результат:</strong> @ViewBag.Result
+    </div>
+}
+
+<a href="@Url.Action("Program2", "Programs")">Перейти до Підпрограми 2</a>

@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Профіль користувача";
+}
+
+<h2>Профіль користувача</h2>
+
+<div>
+    <p><strong>Ім'я користувача:</strong> @User.Identity.Name</p>
+    <p><strong>ФІО:</strong> @TempData["FullName"]</p>
+    <p><strong>Телефон:</strong> @TempData["Phone"]</p>
+    <p><strong>Електронна адреса:</strong> @TempData["Email"]</p>
+</div>
+
+<a href="@Url.Action("Logout", "Account")">Вийти</a>
